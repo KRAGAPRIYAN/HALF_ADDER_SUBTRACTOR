@@ -6,6 +6,9 @@ Implementation-of-Half-Adder-and-Half Subtractor-circuit
 
 To design a half adder and half subtractor circuit and verify its truth table in Quartus using Verilog programming.
 
+## Date: 24/05/2026
+## Roll.No: 212225040323
+
 **Equipments Required:**
 
 Hardware – PCs, Cyclone II , USB flasher 
@@ -47,15 +50,61 @@ Figure -02 HALF Subtractor
 
 5.	For different input combinations generate the timing diagram.
 
-
+## Half Adder
 **Program:**
 
-/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+/* Program to design a half adder circuit and verify its truth table in Quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by: K RAGAPRIYAN
+RegisterNumber: 212225040323
+```
+module half_adder(sum, carry, a, b);
+  output sum;
+  output carry;
+  input a;
+  input b;
+  assign sum = a ^ b;
+  assign carry = a & b;
+endmodule
+```
+*/
 
 **RTL Schematic**
 
+![alt text](<Screenshot 2026-05-24 130650.png>)
+
 **Output/TIMING Waveform**
 
+![alt text](<Screenshot 2026-05-24 131017.png>)
+
+## Half Subtractor
+**Program:**
+
+/* Program to design a half subtractor circuit and verify its truth table in Quartus using Verilog programming.
+
+Developed by: K RAGAPRIYAN
+RegisterNumber: 212225040323
+```
+module half_subtractor(diff, borrow, a, b);
+  output diff;
+  output borrow;
+  input a;
+  input b;
+  assign diff = a ^ b;
+  assign borrow = ~a & b;
+endmodule
+
+```
+*/
+
+**RTL Schematic**
+
+![alt text](<Screenshot 2026-05-24 131728.png>)
+
+**Output/TIMING Waveform**
+
+![alt text](<Screenshot 2026-05-24 135040.png>)
+
 **Result:**
+
+Thus, the Half Adder and Half Subtractor circuits were successfully designed and implemented using Verilog HDL in Quartus Prime. The RTL schematic and timing waveform were generated, and the obtained outputs were verified with the respective truth tables, confirming the correct operation of the circuits.
